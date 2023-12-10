@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByeWind Dashboard</title>
+    <script src="router.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <!-- Brand Name -->
+            <div id="brand">
+                <h1>ByeWind</h1>
+            </div>
+            <!-- Menu -->
+            <div id="menu">
+                <!-- Navigation -->
+                <nav>
+                    <a href="#" onclick="router.navigateTo('/overview')">Overview</a>
+                    <a href="#" onclick="router.navigateTo('/projects')">Projects</a>
+                    <a href="#" onclick="router.navigateTo('/machines')">Machines</a>
+                    <a href="#" onclick="router.navigateTo('/user-profile')">User Profile</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Placeholder for Dynamic Content -->
+            <div id="content"></div>
+        </main>
+    </div>
+</body>
+</html>

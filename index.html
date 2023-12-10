@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>ByeWind Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="Dashboard">
-        <h4>Username</h4>
-        <h4>Recently</h4>
-        <ul>
-            <li>Overview</li>
-            <br>
-            <li>Projects</li>
-        </ul>
-        <br>
-        <h4>Dashboards</h4>
-        <ul>
-            <li>Machines</li>
-            <li>Projects
-                <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h4>Pages</h4>
-        <ul>
-            <li><h5>User Profile</h5>
+    <div id="container">
+        <aside id="sidebar">
+            <div id="brand">
+                <h1>ByeWind</h1>
+            </div>
+            <div id="menu">
+                <p>Recently</p>
                 <ul>
                     <li>Overview</li>
                     <li>Projects</li>
                 </ul>
-            </li>
-            
-        </ul>
-
-        <img src="./Images/LOGO-05.png" alt="KFUPM LOGO">
-    </div>    
+                <p>Dashboards</p>
+                <ul>
+                    <li>Machines</li>
+                    <li>Projects</li>
+                </ul>
+                <p>Pages</p>
+                <ul>
+                    <li>User Profile</li>
+                </ul>
+            </div>
+        </aside>
+        <main id="main-content">
+            <header id="main-header">
+                <div id="breadcrumbs">Dashboards / Default</div>
+                <div id="notifications">Notifications</div>
+            </header>
+            <section id="dashboard">
+                <nav id="dashboard-nav">
+                    <ul>
+                        <li>Overview</li>
+                        <li>Teams</li>
+                        <li>Members</li>
+                        <li>Machines</li>
+                        <li>Projects</li>
+                    </ul>
+                </nav>
+                <div id="project-search">
+                    <input type="text" placeholder="KFUPM Project">
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
