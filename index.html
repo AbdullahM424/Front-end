@@ -6,6 +6,20 @@
     <title>ByeWind Dashboard</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    .vertical-line {
+        border-left: 1px solid #666;
+        height: 100vh; 
+        margin-right: 20px;
+        margin-left: -50px; 
+      }
+      a{
+        color:#000;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+</style>
 <body>
     <div id="container">
         <aside id="sidebar">
@@ -18,10 +32,17 @@
                     <li>Overview</li>
                     <li>Projects</li>
                 </ul>
-                <p>Dashboards</p>
+                <a href="index.html">Dashboard</a>
                 <ul>
-                    <li>Machines</li>
-                    <li>Projects</li>
+                    <div>
+                        <a href="reserveMachine.html">Machines</a>
+                      </div>
+                      <div>
+                        <a>Projects</a>
+                      </div>
+                      <div>
+                        <a href="teamPage.html">Teams</a>
+                      </div> 
                 </ul>
                 <p>Pages</p>
                 <ul>
@@ -29,6 +50,7 @@
                 </ul>
             </div>
         </aside>
+        <div class="vertical-line"></div>
         <main id="main-content">
             <header id="main-header">
                 <div id="breadcrumbs">Dashboards / Default</div>
@@ -38,9 +60,9 @@
                 <nav id="dashboard-nav">
                     <ul>
                         <li>Overview</li>
-                        <li>Teams</li>
+                        <a href="teamPage.html">Teams</a>
                         <li>Members</li>
-                        <li>Machines</li>
+                        <a href="reserveMachine.html">Machines</a>
                         <li>Projects</li>
                     </ul>
                 </nav>
