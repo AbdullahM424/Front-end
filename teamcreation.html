@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Team</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Add any additional styling for the user profile page here */
+        #editProfileForm {
+            display: none; 
+        }
+        .vertical-line {
+        border-left: 1px solid #666;
+        height: 100vh; 
+        margin-right: 20px;
+        margin-left: -50px; 
+      }
+      a{
+        color:#000;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+    </style>
+    <!-- <script src="./userProfile.js" defer></script> -->
+    <script src="./teamcreation.js" defer></script>
+
+</head>
+<body>
+    <div id="container">
+        <aside id="sidebar">
+            <!-- Sidebar content remains the same -->
+            <div id="brand">
+                <h1>KFUPM Project Manager</h1>
+            </div>
+            <div id="menu">
+                <p>Recently</p>
+                <ul>
+                    <li>Overview</li>
+                </ul>
+                <a href="index.html">Dashboard</a>
+                <ul>
+                    <div>
+                        <a href="reserveMachine.html">Machines</a>
+                      </div>
+                      <div>
+                        <a href="projects.html">Projects</a>
+                      </div>
+                      <div>
+                        <a href="teamPage.html">Teams</a>
+                      </div> 
+                </ul>
+                <p>Pages</p>
+                <ul>
+                    <li><a href="./userProfile.html">User Profile</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="vertical-line"></div>
+        <main id="main-content">
+            <header id="main-header">
+                <div>
+                    <button onclick="goBack()">Back</button>
+                    <script>
+                        function goBack() {
+                            window.location.href = 'teamPage.html';
+                        }
+                    </script>
+                </div>
+                <div id="breadcrumbs"><a href="index.html">Dashboards</a> / Team Creation</div>
+                <div id="notifications">Notifications</div>
+            </header>
+            <section id="user-profile">
+                <h2>Team Creation</h2>
+                <div id="viewProfile">
+                    <label for="userName">Team Name:</label>
+                    <p id="userName"></p>
+                    <button id="nameTeamBtn">Name Team</button>
+                </div>
+                <form id="editProfileForm">
+                    <label for="editUserName">Team Name:</label>
+                    <input type="text" id="editUserName" placeholder="Enter team name">
+                    <button type="button" id="saveTeambtn">Save Team</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </form>
+                <div id="notifications-container">
+                    <div id="notifications-content">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./Notifications.js"></script>
+
+</body>
+</html>
