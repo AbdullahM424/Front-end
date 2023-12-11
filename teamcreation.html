@@ -23,6 +23,15 @@
         text-decoration: none;
         margin-right: 20px;
       }
+      .assign-button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
     </style>
     <!-- <script src="./userProfile.js" defer></script> -->
     <script src="./teamcreation.js" defer></script>
@@ -62,7 +71,7 @@
         <main id="main-content">
             <header id="main-header">
                 <div>
-                    <button onclick="goBack()">Back</button>
+                    <button class=assign-button onclick="goBack()">Back</button>
                     <script>
                         function goBack() {
                             window.location.href = 'teamPage.html';
@@ -77,13 +86,13 @@
                 <div id="viewProfile">
                     <label for="userName">Team Name:</label>
                     <p id="userName"></p>
-                    <button id="nameTeamBtn">Name Team</button>
+                    <button class=assign-button id="nameTeamBtn">Name Team</button>
                 </div>
                 <form id="editProfileForm">
                     <label for="editUserName">Team Name:</label>
                     <input type="text" id="editUserName" placeholder="Enter team name">
-                    <button type="button" id="saveTeambtn">Save Team</button>
-                    <button type="button" id="cancelBtn">Cancel</button>
+                    <button class=assign-button type="button" id="saveTeambtn">Save Team</button>
+                    <button class=assign-button type="button" id="cancelBtn">Cancel</button>
                 </form>
                 <div id="notifications-container">
                     <div id="notifications-content">

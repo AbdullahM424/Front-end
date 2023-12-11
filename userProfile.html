@@ -23,6 +23,15 @@
         text-decoration: none;
         margin-right: 20px;
       }
+      .assign-button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
     </style>
     <script src="./userProfile.js" defer></script>
 </head>
@@ -60,7 +69,7 @@
         <main id="main-content">
             <header id="main-header">
                 <div>
-                    <button onclick="goBack()">Back</button>
+                    <button class=assign-button onclick="goBack()">Back</button>
                     <script>
                         function goBack() {
                             window.location.href = 'index.html';
@@ -77,15 +86,15 @@
                     <p id="userName">Mohammed Aslam</p>
                     <label for="userInterests">Interests:</label>
                     <p id="userInterests">Web Development, Design</p>
-                    <button id="editProfileBtn">Edit Profile</button>
+                    <button class=assign-button id="editProfileBtn">Edit Profile</button>
                 </div>
                 <form id="editProfileForm">
                     <label for="editUserName">Name:</label>
                     <input type="text" id="editUserName" placeholder="Enter your name">
                     <label for="editUserInterests">Interests:</label>
                     <input type="text" id="editUserInterests" placeholder="Enter your interests">
-                    <button type="button" id="saveProfileBtn">Save Profile</button>
-                    <button type="button" id="cancelEditBtn">Cancel</button>
+                    <button class=assign-button type="button" id="saveProfileBtn">Save Profile</button>
+                    <button class=assign-button type="button" id="cancelEditBtn">Cancel</button>
                 </form>
                 <div id="notifications-container">
                     <div id="notifications-content">
