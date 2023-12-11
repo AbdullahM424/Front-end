@@ -19,6 +19,16 @@
         text-decoration: none;
         margin-right: 20px;
       }
+    .form-popup {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        padding: 20px;
+        z-index: 9;
+    }
 </style>
 </head>
 <body>
@@ -57,35 +67,89 @@
                 <div id="notifications">Notifications</div>
             </header>
             <section id="projects">
-                <h2>Projects</h2>
-                <table>
-                    <thead>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <table id="projectTable">
+                      <thead>
                         <tr>
-                            <th>Project ID</th>
-                            <th>Project Name</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <!-- Add more columns as needed -->
+                          <th>Project ID</th>
+                          <th>Project Name</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
+                          <!-- Add more columns as needed -->
                         </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Add rows with project data -->
+                      </thead>
+                      <tbody id="projectTableBody">
+                        <!-- Existing rows with project data -->
                         <tr>
-                            <td>1</td>
-                            <td>Project A</td>
-                            <td>2023-01-01</td>
-                            <td>2023-12-31</td>
-                            <!-- Add more cells as needed -->
+                          <td>1</td>
+                          <td>Project A</td>
+                          <td>2023-01-01</td>
+                          <td>2023-12-31</td>
+                          <td><button onclick="deleteProject(this)">Delete</button></td>
+                          <!-- Add more cells as needed -->
                         </tr>
                         <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
+                      </tbody>
+                    </table>
+                  </section>
+                <button onclick="openForm()">Create Project</button>
+
+                <div class="form-popup" id="projectForm">
+                  <form onsubmit="addProject(event)">
+                    <label for="projectName">Project Name:</label>
+                    <input type="text" id="projectName" name="projectName" required><br><br>
+                    <button type="submit">Create</button>
+                    <button type="button" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
+
+                <script>
+                    let projectIdCounter = 2;
+                  
+                    function openForm() {
+                      document.getElementById("projectForm").style.display = "block";
+                    }
+                  
+                    function closeForm() {
+                      document.getElementById("projectForm").style.display = "none";
+                    }
+                  
+                    function addProject(event) {
+                      event.preventDefault();
+                      
+                      let projectName = document.getElementById("projectName").value;
+                  
+                      let tableBody = document.getElementById("projectTableBody");
+                      let newRow = tableBody.insertRow();
+                  
+                      let cell1 = newRow.insertCell(0);
+                      cell1.appendChild(document.createTextNode(projectIdCounter));
+                      let cell2 = newRow.insertCell(1);
+                      cell2.appendChild(document.createTextNode(projectName));
+                      let cell3 = newRow.insertCell(2);
+                      cell3.appendChild(document.createTextNode("2023-01-01"));
+                  
+                      let cell4 = newRow.insertCell(3);
+                      cell4.appendChild(document.createTextNode("2023-12-31"));
+
+                      let cell5 = newRow.insertCell(4);
+                      cell5.innerHTML = '<button onclick="deleteProject(this)">Delete</button>';
+                  
+                      projectIdCounter++;
+                  
+                      document.getElementById("projectName").value = "";
+                      closeForm();
+                    }
+                    function deleteProject(button) {
+                        let row = button.parentNode.parentNode;
+                        row.parentNode.removeChild(row);}
+                  </script>
                 <div id="notifications-container">
                     <div id="notifications-content">
                         <!-- Notifications content will go here -->
                     </div>
                 </div>
-            </section>
         </main>
     </div>
 
