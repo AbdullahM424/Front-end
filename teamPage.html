@@ -5,93 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Information</title>
     <link rel="stylesheet" href="./styles.css">
-</head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    h1{
-        white-space: nowrap;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 8px;
-      text-align: left;
-    }
-    .vertical-line {
-        border-left: 1px solid #666;
-        height: 100vh; 
-        margin-right: 20px;
-        margin-left: -50px; 
-      }
-      a{
-        color:#000;
-        text-decoration: none;
-        margin-right: 20px;
-      }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* h1 {
+            white-space: nowrap;
+        } */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .vertical-line {
+            border-left: 1px solid #666;
+            height: 100vh;
+            margin-right: 20px;
+            margin-left: -50px;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .assign-button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-        <div id="container">
-            <aside id="sidebar">
-                <div id="brand">
-                    <h2>KFUPM Project Manager</h2>
+    <div id="container">
+        <aside id="sidebar">
+            <div id="brand">
+                <h1>KFUPM Project Manager</h1>
+            </div>
+            <div id="menu">
+                <p>Recently</p>
+                <ul>
+                    <li>Overview</li>
+                    <li><a href="./projects.html">Projects</a></li>
+                </ul>
+                <a href="index.html">Dashboard</a>
+                <ul>
+                    <div>
+                        <a href="reserveMachine.html">Machines</a>
+                      </div>
+                      <div>
+                        <a href="projects.html">Projects</a>
+                      </div>
+                      <div>
+                        <a href="teamPage.html">Teams</a>
+                      </div> 
+                </ul>
+                <p>Pages</p>
+                <ul>
+                    <li><a href="./userProfile.html">User Profile</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="vertical-line"></div>
+        <main id="main-content">
+            <header id="main-header">
+                <div id="breadcrumbs"><a href="index.html">Dashboards</a> / Teams</div>
+                <div id="notifications">Notifications</div>
+            </header>
+            <ul>
+                <h1>Team A</h1>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Project</th>
+                    </tr>
+                    <tr>
+                        <td>Jabir Alnahari</td>
+                        <td>Project X</td>
+                    </tr>
+                    <tr>
+                        <td>Abdullah Almeshhen</td>
+                        <td>Project X</td>
+                    </tr>
+                    <tr>
+                        <td>Nawaf Alharthi</td>
+                        <td>Project X</td>
+                    </tr>
+                    <tr>
+                        <td>Mohammed Alajmi</td>
+                        <td>Project X</td>
+                    </tr>
+                </table>
+                <button class="assign-button" onclick="window.location.href='projects.html'">Assign Project</button>
+            </ul>
+            <div id="notifications-container">
+                <div id="notifications-content">
+                    <!-- Notifications content will go here -->
                 </div>
-                <div id="menu">
-                    <p>Recently</p>
-                    <ul>
-                        <li>Overview</li>
-                        <li>Projects</li>
-                    </ul>
-                    <a href="index.html">Dashboard</a>
-                    <ul>
-                        <div>
-                            <a href="reserveMachine.html">Machines</a>
-                          </div>
-                          <div>
-                            <a>Projects</a>
-                          </div>
-                          <div>
-                            <a href="teamPage.html">Teams</a>
-                          </div> 
-                    </ul>
-                    <p>Pages</p>
-                    <ul>
-                        <li>User Profile</li>
-                    </ul>
-                    
-                </div>
-                
-            </aside>
-            <div class="vertical-line"></div>
-            <main id="main-content">
-                        <ul>
-                            <h1>Team A</h1>
-                                <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Project</th>
-                                </tr>
-                                <tr>
-                                    <td>Jabir Alnahari</td>
-                                    <td>Project X</td>
-                                </tr>
-                                <tr>
-                                    <td>Abdullah Almeshhen</td>
-                                    <td>Project X</td>
-                                </tr>
-                                <tr>
-                                    <td>Nawaf Alharthi</td>
-                                    <td>Project X</td>
-                                </tr>
-                                <tr>
-                                    <td>Mohammed Alajmi</td>
-                                    <td>Project X</td>
-                                </tr>
-                                </table>
-                            </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="./Notifications.js"></script>
 
 </body>
 </html>

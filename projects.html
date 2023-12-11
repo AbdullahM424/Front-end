@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByeWind Dashboard</title>
+    <title>Projects - KFUPM Project Manager</title>
     <link rel="stylesheet" href="./styles.css">
+    <!-- Include any additional styles specific to the projects page if needed -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 <style>
     .vertical-line {
@@ -20,7 +21,6 @@
       }
 </style>
 </head>
-
 <body>
     <div id="container">
         <aside id="sidebar">
@@ -54,22 +54,33 @@
         <div class="vertical-line"></div>
         <main id="main-content">
             <header id="main-header">
-                <div id="breadcrumbs">Dashboards / Default</div>
+                <div id="breadcrumbs"><a href="index.html">Dashboards</a> / Projects</div>
                 <div id="notifications">Notifications</div>
             </header>
-            <section id="dashboard">
-                <nav id="dashboard-nav">
-                    <ul>
-                        <li>Overview</li>
-                        <a href="teamPage.html">Teams</a>
-                        <li>Members</li>
-                        <a href="reserveMachine.html">Machines</a>
-                        <a href="./projects.html">Projects</a>
-                    </ul>
-                </nav>
-                <div id="project-search">
-                    <input type="text" placeholder="KFUPM Project">
-                </div>
+            <section id="projects">
+                <h2>Projects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Project Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <!-- Add more columns as needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add rows with project data -->
+                        <tr>
+                            <td>1</td>
+                            <td>Project A</td>
+                            <td>2023-01-01</td>
+                            <td>2023-12-31</td>
+                            <!-- Add more cells as needed -->
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
                 <div id="notifications-container">
                     <div id="notifications-content">
                         <!-- Notifications content will go here -->

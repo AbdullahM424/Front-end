@@ -1,0 +1,33 @@
+// userProfile.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const viewProfile = document.getElementById('viewProfile');
+    const editProfileForm = document.getElementById('editProfileForm');
+    const editProfileBtn = document.getElementById('editProfileBtn');
+    const cancelEditBtn = document.getElementById('cancelEditBtn');
+    const saveProfileBtn = document.getElementById('saveProfileBtn');
+
+    editProfileBtn.addEventListener('click', function () {
+        viewProfile.style.display = 'none';
+        editProfileForm.style.display = 'block';
+    });
+
+    cancelEditBtn.addEventListener('click', function () {
+        viewProfile.style.display = 'block';
+        editProfileForm.style.display = 'none';
+    });
+
+    saveProfileBtn.addEventListener('click', function () {
+        // Get values from the form
+        const editedName = document.getElementById('editUserName').value;
+        const editedInterests = document.getElementById('editUserInterests').value;
+
+        // Update the view with the new values
+        document.getElementById('userName').textContent = editedName;
+        document.getElementById('userInterests').textContent = editedInterests;
+
+        // Hide the form and show the view
+        viewProfile.style.display = 'block';
+        editProfileForm.style.display = 'none';
+    });
+});

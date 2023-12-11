@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByeWind Dashboard</title>
+    <title>User Profile - ByeWind Dashboard</title>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    .vertical-line {
+
+    <style>
+        /* Add any additional styling for the user profile page here */
+        #editProfileForm {
+            display: none; /* Hide the form by default */
+        }
+        .vertical-line {
         border-left: 1px solid #666;
         height: 100vh; 
         margin-right: 20px;
@@ -18,12 +23,13 @@
         text-decoration: none;
         margin-right: 20px;
       }
-</style>
+    </style>
+    <script src="./userProfile.js" defer></script>
 </head>
-
 <body>
     <div id="container">
         <aside id="sidebar">
+            <!-- Sidebar content remains the same -->
             <div id="brand">
                 <h1>KFUPM Project Manager</h1>
             </div>
@@ -54,22 +60,34 @@
         <div class="vertical-line"></div>
         <main id="main-content">
             <header id="main-header">
-                <div id="breadcrumbs">Dashboards / Default</div>
+                <div>
+                    <button onclick="goBack()">Back</button>
+                    <script>
+                        function goBack() {
+                            window.location.href = 'index.html';
+                        }
+                    </script>
+                </div>
+                <div id="breadcrumbs"><a href="index.html">Dash</a> / User Profile</div>
                 <div id="notifications">Notifications</div>
             </header>
-            <section id="dashboard">
-                <nav id="dashboard-nav">
-                    <ul>
-                        <li>Overview</li>
-                        <a href="teamPage.html">Teams</a>
-                        <li>Members</li>
-                        <a href="reserveMachine.html">Machines</a>
-                        <a href="./projects.html">Projects</a>
-                    </ul>
-                </nav>
-                <div id="project-search">
-                    <input type="text" placeholder="KFUPM Project">
+            <section id="user-profile">
+                <h2>User Profile</h2>
+                <div id="viewProfile">
+                    <label for="userName">Name:</label>
+                    <p id="userName">John Doe</p>
+                    <label for="userInterests">Interests:</label>
+                    <p id="userInterests">Web Development, Design</p>
+                    <button id="editProfileBtn">Edit Profile</button>
                 </div>
+                <form id="editProfileForm">
+                    <label for="editUserName">Name:</label>
+                    <input type="text" id="editUserName" placeholder="Enter your name">
+                    <label for="editUserInterests">Interests:</label>
+                    <input type="text" id="editUserInterests" placeholder="Enter your interests">
+                    <button type="button" id="saveProfileBtn">Save Profile</button>
+                    <button type="button" id="cancelEditBtn">Cancel</button>
+                </form>
                 <div id="notifications-container">
                     <div id="notifications-content">
                         <!-- Notifications content will go here -->

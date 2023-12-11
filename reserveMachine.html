@@ -5,106 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Schedules</title>
     <link rel="stylesheet" href="./styles.css">
-</head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    h1{
-        white-space: nowrap;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 8px;
-      text-align: left;
-    }
-    .vertical-line {
-        border-left: 1px solid #666;
-        height: 100vh; 
-        margin-right: 20px;
-        margin-left: -50px; 
-      }
-      a{
-        color:#000;
-        text-decoration: none;
-        margin-right: 20px;
-      }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* h1 {
+            white-space: nowrap;
+        } */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .vertical-line {
+            border-left: 1px solid #666;
+            height: 100vh;
+            margin-right: 20px;
+            margin-left: -50px;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div id="container">
-    <aside id="sidebar">
-        <div id="brand">
-            <h2>KFUPM Project Manager</h2>
-        </div>
-        <div id="menu">
-            <p>Recently</p>
-            <ul>
-                <li>Overview</li>
-                <li>Projects</li>
-            </ul>
-            <a href="index.html">Dashboard</a>
-            <ul>
-            <div>
-              <a href="reserveMachine.html">Machines</a>
+    <div id="container">
+        <aside id="sidebar">
+            <div id="brand">
+                <h1>KFUPM Project Manager</h1>
             </div>
-            <div>
-              <a>Projects</a>
+            <div id="menu">
+                <p>Recently</p>
+                <ul>
+                    <li>Overview</li>
+                    <li><a href="./projects.html">Projects</a></li>
+                </ul>
+                <a href="index.html">Dashboard</a>
+                <ul>
+                    <div>
+                        <a href="reserveMachine.html">Machines</a>
+                      </div>
+                      <div>
+                        <a href="projects.html">Projects</a>
+                      </div>
+                      <div>
+                        <a href="teamPage.html">Teams</a>
+                      </div> 
+                </ul>
+                <p>Pages</p>
+                <ul>
+                    <li><a href="./userProfile.html">User Profile</a></li>
+                </ul>
             </div>
-            <div>
-              <a href="teamPage.html">Teams</a>
-            </div> 
-          </ul>           
-            <p>Pages</p>
-            <ul>
-                <li>User Profile</li>
+        </aside>
+        <div class="vertical-line"></div>
+        <main id="main-content">
+            <header id="main-header">
+                <div id="breadcrumbs"><a href="index.html">Dashboards</a> / Machines</div>
+                <div id="notifications">Notifications</div>
+            </header>            <ul>
+                <h2>Machine Schedule</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Machine</th>
+                            <th>Team</th>
+                            <th>Time Slot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Machine 1</td>
+                            <td>Team A</td>
+                            <td>8:00 AM - 10:00 AM</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
             </ul>
-            
-        </div>
-        
-    </aside>
-    <div class="vertical-line"></div>
-    <main id="main-content">
-      <ul>
-  <h2>Machine Schedule</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Machine</th>
-        <th>Team</th>
-        <th>Time Slot</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Machine 1</td>
-        <td>Team A</td>
-        <td>8:00 AM - 10:00 AM</td>
-      </tr>
-      <tr>
-        <td>Machine 2</td>
-        <td>Team B</td>
-        <td>10:30 AM - 12:30 PM</td>
-      </tr>
-      <tr>
-        <td>Machine 3</td>
-        <td>Team C</td>
-        <td>10:30 AM - 12:30 PM</td>
-      </tr>
-      <tr>
-        <td>Machine 4</td>
-        <td>Team D</td>
-        <td>10:30 AM - 12:30 PM</td>
-      </tr>
-      <tr>
-        <td>Machine 5</td>
-        <td>Team E</td>
-        <td>10:30 AM - 12:30 PM</td>
-      </tr>
-    </tbody>
-  </table>
-</ul>
+            <div id="notifications-container">
+                <div id="notifications-content">
+                    <!-- Notifications content will go here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./Notifications.js"></script>
+
 </body>
 </html>
+
